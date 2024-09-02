@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>The Lottery Game</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        
+        <div class="popups">
+            <div id="historypopup" class="popup">
+                <div onclick="closepopups();" class="popupoverlay"></div>
+                <div class="popupcontent">
+                    <button onclick="closepopups();" class="closebutton">&times;</button>
+                    <p>History</p>
+                    <div id="historygrid" class="historygrid">
+                        <h1>Day</h1>
+                        <h1>Bet ammount</h1>
+                        <h1>Money</h1>
+                        <h1>Won/Lost</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="statisticspopup" class="popup">
+                <div onclick="closepopups();" class="popupoverlay"></div>
+                <div class="popupcontent statistics">
+                    <button onclick="closepopups();" class="closebutton">&times;</button>
+                    <p>Statistics</p>
+                    <div class="statisticsgrid">
+                        <h1>Statistic</h1>
+                        <h1>Value</h1>
+                        <h1>Percentage of wins</h1>
+                        <h1 id="percentageofwins">0</h1>
+                        <h1>Percentage of losses</h1>
+                        <h1 id="percentageoflosses">0</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="betsperclickpopup" class="popup">
+                <div onclick="closepopups();" class="popupoverlay"></div>
+                <div class="popupcontent betsperclick">
+                    <button onclick="closepopups();" class="closebutton">&times;</button>
+                    <p>Statistics</p>
+                    <label class="betlabel">How many bets will you do each click?</label>
+                    <input id="betsperclick" type="number" value="1" placeholder="0">
+                </div>
+            </div>
+        </div>
+
+        <div class="section1">
+            <div class="infodiv">
+                <p id="level">Level: 1</p>
+                <p id="day">Day: 1</p>
+            </div>
+            <div class="maindiv">
+                <p id="money">Money: 1000</p>
+                <p id="winlosemessage">You win</p>
+            </div>
+        </div>
+
+        <div class="section2">
+            <div class="betdiv">
+                <div>
+                    <label class="betlabel">How much are you willing to bet?</label>
+                    <input id="input" type="number" value="1" placeholder="0">
+                </div>
+                <button onclick="bet();">Bet</button>
+            </div>
+            <div class="buttongrid">
+                <button onclick="reset();">Reset</button>
+                <button onclick="history();">History</button>
+                <button onclick="statistics();">Statistics</button>
+                <button onclick="betperclick();">Bets/click</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

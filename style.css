@@ -1,0 +1,245 @@
+.infodiv {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: -42px;
+}
+
+.maindiv {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 15vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.maindiv p {
+    font-size: 40px;
+}
+
+.maindiv p:last-child {
+    font-size: 15px;
+    margin-top: 10px;
+    display: none;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.betdiv {
+    display: flex;
+    width: 100vw;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.betdiv div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.betdiv div * {
+    display: block;
+}
+
+.betdiv div input, input {
+    width: 218.625px;
+    margin-top: 3px;
+}
+
+.betdiv button, .buttongrid button {
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border-left: none;
+    border-top: none;
+    border-color: #121414;
+    cursor: pointer;
+    background-color: #DEEDEB;
+}
+
+.betdiv button:active, .buttongrid button:active {
+    background-color: #C4D1CF;
+}
+
+.betdiv * {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.buttongrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.popup {
+    display: none;
+}
+
+.popupoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.popupcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    min-width: 425px;
+    height: 90vh;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.popupcontent p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.closebutton {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    font-weight: 600px;
+    text-align: center;
+    background-color: #E81123;
+    color: white;
+    border-radius: 40%;
+    border-width: 0;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.historygrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 25px;
+    max-height: calc(90vh - 90px);
+    overflow-y: auto;
+}
+
+h1 {
+    padding: 5px;
+    background-color: #BCBCBC;
+    border-style: solid;
+    border-width: 2px 0px 0px 2px;
+    border-color: #121212;
+}
+
+.historygrid h1:nth-last-child(-n+4) {
+    border-bottom: 2px solid;
+}
+
+.historygrid h1:nth-child(4n) {
+    border-right: 2px solid;
+}
+
+.historygrid h1:first-child {
+    border-top-left-radius: 5px;
+}
+
+.historygrid h1:nth-last-child(4) {
+    border-bottom-left-radius: 5px;
+}
+
+.historygrid h1:nth-child(4) {
+    border-top-right-radius: 5px;
+}
+
+.historygrid h1:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.statistics {
+    height: 50vh;
+}
+
+.statisticsgrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 25px;
+    max-height: calc(50vh - 90px);
+    overflow-y: auto;
+}
+
+.statisticsgrid h1:nth-last-child(-n+2) {
+    border-bottom: 2px solid;
+}
+
+.statisticsgrid h1:nth-child(2n) {
+    border-right: 2px solid;
+}
+
+.statisticsgrid h1:first-child {
+    border-top-left-radius: 5px;
+}
+
+.statisticsgrid h1:nth-last-child(2) {
+    border-bottom-left-radius: 5px;
+}
+
+.statisticsgrid h1:nth-child(2) {
+    border-top-right-radius: 5px;
+}
+
+.statisticsgrid h1:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.closebutton:active {
+    background-color: #A50D1C;
+    color: #BCBCBC;
+}
+
+@media screen and (max-width: 600px) {
+    .maindiv {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popupcontent {
+        width: 89vw;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .betdiv button {
+        margin-right: 60px;
+        margin-left: 60px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .infodiv {
+        margin-bottom: 0;
+    }
+}
